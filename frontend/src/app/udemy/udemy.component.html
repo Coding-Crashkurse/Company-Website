@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-title>Udemy Promo</mat-card-title>
+    <mat-card-subtitle>Get a discount on our latest course!</mat-card-subtitle>
+    <mat-card-content>
+        <p><strong>Code:</strong> {{ promoCode }}</p>
+        <p><strong>Time Left:</strong> {{ timeLeft }}</p>
+        <a [href]="promoLink" target="_blank">
+            <button mat-raised-button color="primary">Redeem</button>
+        </a>
+    </mat-card-content>
+</mat-card>
