@@ -1,11 +1,35 @@
-<mat-card>
+<mat-card class="home-card">
     <mat-card-header>
-        <mat-card-title>Welcome to My Portfolio</mat-card-title>
+        <mat-card-title>Accelerate Your Dev Skills 🚀</mat-card-title>
+        <mat-card-subtitle>
+            Build Real Projects with Step-by-Step Courses, Free YouTube Tutorials & Exclusive Udemy Deals
+        </mat-card-subtitle>
     </mat-card-header>
+
+    <img mat-card-image src="assets/coding.JPG" alt="Hands coding on a laptop" *ngIf="showImage" />
+
     <mat-card-content>
         <p>
-            This is the home page. Check out our courses, YouTube channel, or Udemy
-            deals above!
+            Ready to build real-world applications with today's most popular frameworks? Our courses give you clear,
+            practical guidance—<strong>no fluff, no wasted time.</strong>
+            Whether you're just starting out or already experienced, you'll get plenty of hands-on practice, valuable
+            insights, and personal support to help you <strong>grow your skills quickly.</strong>
+        </p>
+
+        <ul>
+            <li><strong>Build Real Projects</strong> you can deploy and proudly showcase.</li>
+            <li><strong>Practical Tips & Tricks</strong> directly from industry experts.</li>
+            <li><strong>Exclusive Discounts</strong>—save up to 90% on Udemy courses.</li>
+            <li>A growing <strong>YouTube channel</strong> packed with free lessons and mini-projects.</li>
+        </ul>
+
+        <p>
+            Master the latest web development technologies—from building front-end applications with
+            <strong>Angular</strong>, creating powerful backend APIs with <strong>FastAPI</strong>, to exploring
+            advanced <strong>LLM workflows</strong> using <strong>LangChain.</strong>
+            <br />
+            <strong>Join thousands of learners</strong> who've already <em>transformed their skills</em>. Start building
+            the future you've been dreaming of!
         </p>
     </mat-card-content>
 </mat-card>

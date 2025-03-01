@@ -1,5 +1,88 @@
-mat-card {
-  margin: 1rem auto;
-  max-width: 500px;
+/* The responsive grid remains the same */
+.courses-container {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.course-card {
+  position: relative; /* optional if you want fancy hovers */
+  border-radius: 10px;
+  background-size: cover; /* fill the card */
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 200px; /* ensure some height if the text is short */
+  overflow: hidden; /* clip the corners to the card’s border-radius */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.course-card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.course-card.expired {
+  opacity: 0.75;
+}
+
+/*
+     The .overlay is now in normal flow,
+     so the card expands as needed
+  */
+.overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  padding: 1.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  border-radius: 10px;
+}
+
+mat-card-title {
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+mat-card-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #eee;
+}
+
+/* Countdown container + boxes, same as before */
+.countdown-container {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.cd-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  width: 55px;
   text-align: center;
+  padding: 0.4rem 0.2rem;
+}
+
+.cd-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.cd-label {
+  font-size: 0.7rem;
+}
+
+mat-card-actions {
+  margin-top: 1rem;
 }

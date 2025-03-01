@@ -9,4 +9,6 @@ import { MatCardModule } from '@angular/material/card';
   styleUrls: ['./home.component.css'],
   imports: [CommonModule, MatCardModule],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  showImage = true;
+}

@@ -10,6 +10,8 @@ class Course(Base):
     title = Column(String, nullable=False)
     price = Column(Float, nullable=False)
     link = Column(String, nullable=False)
+    # NEW: image column (optional)
+    image = Column(String, nullable=True)
 
     promocode = relationship("PromoCode", back_populates="course", uselist=False)
 

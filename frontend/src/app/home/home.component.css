@@ -1,5 +1,45 @@
-/* Example styling for home page cards */
-mat-card {
-  max-width: 600px;
-  margin: 1rem auto;
+.home-card {
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  /* Optional slight shadow for a more polished look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+mat-card-header {
+  background-color: #fefefe;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+mat-card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+mat-card-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+mat-card-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+img[mat-card-image] {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }

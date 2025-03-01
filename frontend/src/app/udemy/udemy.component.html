@@ -1,11 +1,44 @@
-<mat-card>
-    <mat-card-title>Udemy Promo</mat-card-title>
-    <mat-card-subtitle>Get a discount on our latest course!</mat-card-subtitle>
-    <mat-card-content>
-        <p><strong>Code:</strong> {{ promoCode }}</p>
-        <p><strong>Time Left:</strong> {{ timeLeft }}</p>
-        <a [href]="promoLink" target="_blank">
-            <button mat-raised-button color="primary">Redeem</button>
-        </a>
-    </mat-card-content>
-</mat-card>
+<div class="courses-container">
+    <mat-card *ngFor="let c of courses" class="course-card" [ngStyle]="{ 'background-image': 'url(' + c.image + ')' }"
+        [class.expired]="c.expired">
+        <div class="overlay">
+            <mat-card-title>{{ c.title }}</mat-card-title>
+            <mat-card-subtitle>
+                Original Price: {{ c.price | currency }}
+            </mat-card-subtitle>
+
+            <div *ngIf="c.promocode && !c.expired; else noPromo">
+                <p><strong>Promo Code:</strong> {{ c.promocode.code }}</p>
+                <p><strong>Promo Price:</strong> {{ c.promocode.price | currency }}</p>
+                <div class="countdown-container">
+                    <div class="cd-box">
+                        <div class="cd-value">{{ c.days }}</div>
+                        <div class="cd-label">Days</div>
+                    </div>
+                    <div class="cd-box">
+                        <div class="cd-value">{{ c.hours }}</div>
+                        <div class="cd-label">Hours</div>
+                    </div>
+                    <div class="cd-box">
+                        <div class="cd-value">{{ c.minutes }}</div>
+                        <div class="cd-label">Minutes</div>
+                    </div>
+                    <div class="cd-box">
+                        <div class="cd-value">{{ c.seconds }}</div>
+                        <div class="cd-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+
+            <ng-template #noPromo>
+                <p>No promo code for this course or promo expired.</p>
+            </ng-template>
+
+            <mat-card-actions>
+                <a mat-raised-button color="primary" [href]="c.link" target="_blank" rel="noopener noreferrer">
+                    Go to Course
+                </a>
+            </mat-card-actions>
+        </div>
+    </mat-card>
+</div>

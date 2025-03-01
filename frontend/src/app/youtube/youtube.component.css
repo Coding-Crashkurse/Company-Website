@@ -1,5 +1,16 @@
-mat-card {
-  margin: 1rem auto;
-  max-width: 600px;
-  text-align: center;
+.youtube-teaser {
+  max-width: 600px; /* keep card from going too wide */
+  margin: 2rem auto; /* center horizontally, add vertical space */
+  text-align: center; /* center the text and button */
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+mat-card-content p {
+  font-size: 1rem;
+  line-height: 1.5;
 }

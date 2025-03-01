@@ -7,6 +7,8 @@ class CourseBase(BaseModel):
     title: str
     price: float
     link: str
+    # NEW: Make image optional
+    image: Optional[str] = None
 
 
 class CourseCreate(CourseBase):
