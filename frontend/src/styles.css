@@ -1,7 +1,20 @@
-body {
+@font-face {
+  font-family: "Cubano";
+  src: url("/assets/fonts/Cubano.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Stellt sicher, dass der Font geladen wird */
+}
+
+/* Wendet Cubano auf ALLES an */
+* {
+  font-family: "Cubano", sans-serif !important;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  /* A soft gradient from top to bottom */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background: black;
   color: #333;
 }
